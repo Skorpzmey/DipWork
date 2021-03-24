@@ -1,5 +1,62 @@
-.wrapper{
+body{
+    margin: 0;
+    bottom: 0;
+    background-color: #F7F8FA;
+}
+/*родительская сетка*/
+.wrapper {
+    height: 100vh;
     display: grid;
-    grid-template-rows: 80px 1fr 1fr;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 15% 1fr 15%;
+}
+/*Свойства для сетки header*/
+.headerGrid {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/*Свойства для блока header*/
+.header {
+    display: grid;
+    background-color: #000000;
+}
+
+/*Свойства для вложенных блоков header*/
+.header > div {
+    border: 2px solid red;
+}
+
+/*Свойства для сетки middleBlock*/
+.middleBlockGrid {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/*Свойства для блока middleBlock*/
+.middleBlock{
+    display: grid;
+    background-color: #ffffff;
+}
+
+/*Свойства для сетки footer*/
+.footerGrid {
+    grid-column-start: 4;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+/*Свойства для блока footer*/
+.footer {
+    display: grid;
+    background-color: #000000;
+}
+
+.wrapper > div {
+    /* border: 2px solid red; */
 }
