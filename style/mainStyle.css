@@ -21,12 +21,48 @@ body{
 /*Свойства для блока header*/
 .header {
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 15% 15% 15%;
     background-color: #000000;
 }
 
-/*Свойства для вложенных блоков header*/
+/*Свойства для вложенных блоков в header*/
 .header > div {
     border: 2px solid red;
+}
+.logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: white;
+}
+
+.logo p {
+    font-size: 30px;
+    margin: 21px auto;
+}
+
+.courses {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    width: 15vw;
+    
+}
+
+.courses p {
+    font-size: 25px;
+    text-align: justify;
+    color: white;
+}
+
+.search {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    width: 15vw;
+}
+
+.search input {
+    width: 15em;
+    margin: 30px auto;
 }
 
 /*Свойства для сетки middleBlock*/
