@@ -22,14 +22,11 @@ body{
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 15% 15% 15%;
+    grid-template-columns: 155px 155px 155px;
     background-color: #000000;
 }
 
 /*Свойства для вложенных блоков в header*/
-.header > div {
-    border: 2px solid red;
-}
 .logo {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -74,9 +71,43 @@ body{
 }
 
 /*Свойства для блока middleBlock*/
-.middleBlock{
+.middleBlock {
     display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr  1fr;
     background-color: #ffffff;
+}
+
+.centerContent {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 25px;
+    text-align:center;
+}
+
+.centerContent p:first-child {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.leftContent {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.leftContent p:first-child {
+    width: 90%;
+    margin: 10px 5% auto;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 1px solid #808080;
+    
 }
 
 /*Свойства для сетки footer*/
@@ -91,8 +122,4 @@ body{
 .footer {
     display: grid;
     background-color: #000000;
-}
-
-.wrapper > div {
-    /* border: 2px solid red; */
 }
