@@ -20,17 +20,15 @@ body{
 
 /*Свойства для блока header*/
 .header {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 155px 155px 155px;
     background-color: #000000;
 }
 
 /*Свойства для вложенных блоков в header*/
 .logo {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    margin-left: 15vw;
+    width: 150px;
     color: white;
+    float: left;
 }
 
 .logo p {
@@ -39,22 +37,54 @@ body{
 }
 
 .courses {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    width: 15vw;
-    
+    width: 150px;
+    margin: 24px auto;
+    float: left;
+    position: relative;
 }
 
-.courses p {
-    font-size: 25px;
-    text-align: justify;
+.courses span{
     color: white;
+    font-size: 28px;
+}
+
+.courses ul{
+
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.courses>ul li{
+    color: hsl(49, 97%, 69%);
+    margin-bottom: 1em;     
+}
+
+.courses .title {
+    cursor: pointer;
+}
+
+.courses .title::after {
+    content: '▶ ';
+    font-size: 80%;
+    color: #;
+}
+
+.courses.open .title::after {
+    content: '▼ ';
+}
+
+.courses.open ul {
+    background-color: #000000;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
 }
 
 .search {
-    grid-column-start: 4;
-    grid-column-end: 5;
+
     width: 15vw;
+    float: left;
 }
 
 .search input {

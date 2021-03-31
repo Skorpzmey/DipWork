@@ -8,7 +8,14 @@
         <div class="wrapper">
             <div class="headerGrid header">
                 <div class="logo"><p>EdProg</p></div>
-                <div class="courses"><p>Курсы</p></div>
+                <div class="courses" id="coursesId">
+                    <span class="title">Курсы</span>
+                    <ul>
+                        <li>Заголовок 1</li>
+                        <li>Заголовок 1</li>
+                        <li>Заголовок 1</li>
+                      </ul>
+                </div>
                 <div class="search"><input value="Поиск"></div>
             </div>
             <div class="middleBlockGrid middleBlock">
@@ -23,5 +30,13 @@
             </div>
             <div class="footerGrid footer"></div>
         </div>
+        <script>
+            let menuElem = document.getElementById('coursesId');
+            let titleElem = menuElem.querySelector('.title');
+        
+            titleElem.onclick = function() {
+              menuElem.classList.toggle('open');
+            };
+          </script>
     </body>
 </html>
